@@ -1,0 +1,13 @@
+file_format: "1"
+id: qapla
+name: Qapla
+type: shield
+url: https://github.com/achamian/qapla
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+siblings:
+  - qapla_left
+  - qapla_right
