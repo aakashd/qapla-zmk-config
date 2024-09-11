@@ -3,18 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    behaviors {
-        c_lt: c_lt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "C_LT";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -24,10 +12,8 @@
 &kp TAB         &kp SQT   &kp COMMA  &kp DOT   &kp P     &kp Y                                  &kp F      &kp G     &kp C           &kp R   &kp L   &kp SLASH
 &mt LCTRL CAPS  &kp A     &kp O      &kp E     &kp U     &kp I                                  &kp D      &kp H     &kp T           &kp N   &kp S   &kp MINUS
 &kp LSHIFT      &kp SEMI  &kp Q      &kp J     &kp K     &kp X          &kp LBKT    &kp RBKT    &kp B      &kp M     &kp W           &kp V   &kp Z   &kp RSHIFT
-                                     &kp LALT  &kp LCMD  &c_lt 1 SPACE  &kp DEL     &kp RETURN  &kp SPACE  &kp LGUI  &bt BT_CLR_ALL
+                                     &kp LALT  &kp LCMD  &lt 1 SPACE    &kp DEL     &kp RETURN  &kp SPACE  &kp LGUI  &bt BT_CLR_ALL
             >;
-
-            label = "dvorak";
         };
 
         nav {
@@ -38,8 +24,6 @@
 &trans  &trans  &kp F10 &kp F11 &kp F12 &trans  &trans    &trans  &trans         &trans    &trans    &trans     &trans  &trans
                         &trans  &trans  &trans  &trans    &trans  &trans         &trans    &trans
             >;
-
-            label = "nav";
         };
     };
 };
