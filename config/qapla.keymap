@@ -8,11 +8,10 @@
 
         default_layer {
             bindings = <
-&kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6                       &kp N7     &kp N8  &kp N9  &kp N0  &kp MINUS  &kp EQUAL
-&kp A   &kp B   &kp C   &kp D   &kp E   &kp F                        &kp LS(A)  &kp G   &kp C   &kp R   &kp L      &kp SLASH
-&kp G   &kp H   &kp I   &kp J   &kp K   &kp L                        &kp D      &kp H   &kp T   &kp N   &kp S      &kp MINUS
-&kp M   &kp N   &kp O   &kp P   &kp Q   &kp R   &kp S    &kp RBKT    &kp B      &kp M   &kp W   &kp V   &kp Z      &mt RSHIFT BACKSLASH
-                        &kp T   &kp U   &kp V   &kp W    &kp RETURN  &kp DEL    &to 2   &kp N8
+&kp A   &kp B   &kp C   &kp D   &kp E   &kp F                        &kp LS(A)   &kp LS(B)   &kp LS(C)   &kp LS(D)   &kp LS(E)   &kp LS(F)
+&kp G   &kp H   &kp I   &kp J   &kp K   &kp L                        &kp LS(G)   &kp LS(H)   &kp LS(I)   &kp LS(J)   &kp LS(K)   &kp LS(L)
+&kp M   &kp N   &kp O   &kp P   &kp Q   &kp R   &kp S    &kp LS(M)   &kp LS(N)   &kp LS(O)   &kp LS(P)   &kp LS(Q)   &kp LS(R)   &kp LS(S)
+                        &kp T   &kp U   &kp V   &kp W    &kp LS(T)   &kp LS(U)   &kp LS(V)   &kp LS(W)
             >;
         };
 
