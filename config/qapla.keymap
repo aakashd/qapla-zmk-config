@@ -1,4 +1,5 @@
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 
@@ -7,6 +8,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "default";
             bindings = <
 &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6                       &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS   &kp EQUAL
 &kp A   &kp B   &kp C   &kp D   &kp E   &kp F                        &kp LS(A)   &kp LS(B)   &kp LS(C)   &kp LS(D)   &kp LS(E)   &kp LS(F)
@@ -17,22 +19,24 @@
         };
 
         nav {
+            display-name = "navigation";
             bindings = <
-&trans  &trans  &kp F1   &kp F2   &kp F3   &trans                          &trans         &trans    &trans    &trans     &trans  &trans
-&trans  &trans  &kp F4   &kp F3   &kp F4   &trans                          &kp PAGE_UP    &kp HOME  &kp UP    &kp END    &trans  &trans
-&trans  &trans  &kp F7   &kp F8   &kp F9   &trans                          &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &kp F10  &kp F11  &kp F12  &trans  &trans    &trans        &trans         &trans    &trans    &trans     &trans  &trans
-                         &trans   &trans   &trans  &trans    &kp LEFT_ALT  &kp LGUI       &trans    &trans
+&to 0   &trans  &kp F1  &kp F2  &kp F3  &trans                                             &trans         &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &kp N1  &kp N2  &kp N3  &kp LG(LS(LEFT_BRACKET))                           &kp PAGE_UP    &kp HOME  &kp UP    &kp END    &trans  &trans
+&trans  &trans  &kp N4  &kp N5  &kp N6  &kp LG(LS(RIGHT_BRACKET))                          &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans  &kp N7  &kp N8  &kp N9  &kp N0                     &trans    &trans        &trans         &trans    &trans    &trans     &trans  &trans
+                        &trans  &trans  &trans                     &trans    &kp LEFT_ALT  &kp LGUI       &trans    &trans
             >;
         };
 
         sudoku {
+            display-name = "sudoku";
             bindings = <
-&to 0   &trans     &trans  &trans  &trans  &trans                          &trans  &trans    &trans    &trans     &trans  &trans
-&trans  &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp Z                           &trans  &trans    &kp UP    &trans     &trans  &trans
-&trans  &trans     &kp N4  &kp N5  &kp N6  &kp X                           &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans     &kp N7  &kp N8  &kp N9  &kp C      &kp V        &trans  &trans  &trans    &trans    &trans     &trans  &trans
-                           &kp N0  &trans  &mkp LCLK  &mkp RCLK    &trans  &trans  &trans    &trans
+&to 0   &kp Z  &trans                &trans  &trans  &trans                          &trans  &trans    &trans    &trans     &trans  &trans
+&trans  &kp X  &kp LEFT_CONTROL      &kp N1  &kp N2  &kp N3                          &trans  &trans    &kp UP    &trans     &trans  &trans
+&trans  &kp C  &kp LEFT_SHIFT        &kp N4  &kp N5  &kp N6                          &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &kp V  &kp LS(LEFT_CONTROL)  &kp N7  &kp N8  &kp N9     &kp SLASH    &trans  &trans  &trans    &trans    &trans     &trans  &trans
+                                     &kp N0  &trans  &mkp LCLK  &mkp RCLK    &trans  &trans  &trans    &trans
             >;
         };
     };
