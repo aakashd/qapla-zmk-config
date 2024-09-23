@@ -21,11 +21,11 @@
         nav {
             display-name = "navigation";
             bindings = <
-&to 0   &trans  &kp F1  &kp F2  &kp F3  &trans                                             &trans         &trans    &trans    &trans     &trans  &trans
-&trans  &trans  &kp N1  &kp N2  &kp N3  &kp LG(LS(LEFT_BRACKET))                           &kp PAGE_UP    &kp HOME  &kp UP    &kp END    &trans  &trans
-&trans  &trans  &kp N4  &kp N5  &kp N6  &kp LG(LS(RIGHT_BRACKET))                          &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &kp N7  &kp N8  &kp N9  &kp N0                     &trans    &trans        &trans         &trans    &trans    &trans     &trans  &trans
-                        &trans  &trans  &trans                     &trans    &kp LEFT_ALT  &kp LGUI       &trans    &trans
+&to 0   &trans  &trans        &kp F2  &kp F3  &trans                          &trans         &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &kp LS(LBKT)  &kp N1  &kp N2  &kp N3                          &kp PAGE_UP    &kp HOME  &kp UP    &kp END    &trans  &trans
+&trans  &trans  &kp LS(RBKT)  &kp N4  &kp N5  &kp N6                          &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans        &kp N7  &kp N8  &kp N9  &kp N0    &trans        &trans         &trans    &trans    &trans     &trans  &trans
+                              &trans  &trans  &trans  &trans    &kp LEFT_ALT  &kp LGUI       &trans    &trans
             >;
         };
 
