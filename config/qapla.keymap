@@ -13,7 +13,7 @@
 &kp TAB          &kp SQT   &kp COMMA  &kp DOT     &kp P         &kp Y                                                &kp F          &kp G         &kp C   &kp R   &kp L  &kp SLASH
 &mt LCTRL GRAVE  &kp A     &kp O      &kp E       &lt 1 U       &kp I                                                &kp D          &lt 1 H       &kp T   &kp N   &kp S  &kp MINUS
 &kp LSHIFT       &kp SEMI  &kp Q      &kp J       &kp K         &kp X     &lt 3 LEFT_BRACKET    &lt 3 RIGHT_BRACKET  &kp B          &kp M         &kp W   &kp V   &kp Z  &mt RSHIFT EQUAL
-                                      &caps_word  &kp LEFT_ALT  &kp LGUI  &kp SPACE             &lt 1 SPACE          &mt RCTRL RET  &kp LEFT_ALT  &mo 1
+                                      &caps_word  &kp LEFT_ALT  &kp LGUI  &kp SPACE             &lt 1 BACKSPACE      &mt RCTRL RET  &kp LEFT_ALT  &mo 1
             >;
         };
 
