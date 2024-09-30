@@ -21,8 +21,8 @@
             display-name = "navigation";
             bindings = <
 &trans  &trans             &trans         &trans            &trans            &trans                    &trans         &trans         &trans      &trans     &trans      &to 0
-&trans  &kp LG(LS(GRAVE))  &kp LG(GRAVE)  &kp LC(LS(TAB))   &kp LC(TAB)       &trans                    &kp PAGE_UP    &kp HOME       &kp UP      &kp END    &trans      &trans
-&trans  &kp LG(LS(TAB))    &kp LG(TAB)    &kp LG(LS(LBKT))  &kp LG(LS(RBKT))  &trans                    &kp PAGE_DOWN  &kp LEFT       &kp DOWN    &kp RIGHT  &kp RETURN  &trans
+&trans  &trans             &trans         &kp LC(LS(TAB))   &kp LC(TAB)       &trans                    &kp PAGE_UP    &kp HOME       &kp UP      &kp END    &trans      &trans
+&trans  &kp LG(LS(GRAVE))  &kp LG(GRAVE)  &kp LG(LS(LBKT))  &kp LG(LS(RBKT))  &trans                    &kp PAGE_DOWN  &kp LEFT       &kp DOWN    &kp RIGHT  &kp RETURN  &trans
 &trans  &kp LG(BACKSLASH)  &trans         &trans            &trans            &trans  &to 0     &to 0   &trans         &kp BACKSPACE  &kp DELETE  &trans     &trans      &trans
                                           &trans            &trans            &trans  &trans    &trans  &trans         &trans         &trans
             >;
@@ -34,7 +34,7 @@
 &kp ESC  &kp Z  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans     &trans  &trans
 &trans   &kp X  &kp N1  &kp N2  &kp N3  &trans                    &trans  &trans    &kp UP    &trans     &trans  &trans
 &trans   &kp C  &kp N4  &kp N5  &kp N6  &trans                    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans   &kp V  &kp N7  &kp N8  &kp N9  &kp N0  &trans    &trans  &trans  &trans    &trans    &trans     &trans  &trans
+&trans   &kp V  &kp N7  &kp N8  &kp N9  &kp N0  &to 0     &to 0   &trans  &trans    &trans    &trans     &trans  &trans
                         &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans
             >;
         };
