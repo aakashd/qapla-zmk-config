@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 / {
     keymap {
@@ -9,10 +10,10 @@
         default_layer {
             display-name = "default";
             bindings = <
-&kp ESC          &kp N1    &kp N2     &kp N3      &kp N4        &kp N5                                               &kp N6         &kp N7        &kp N8  &kp N9  &kp N0 &kp EQUAL
-&kp TAB          &kp SQT   &kp COMMA  &kp DOT     &kp P         &kp Y                                                &kp F          &kp G         &kp C   &kp R   &kp L  &kp SLASH
-&mt LCTRL GRAVE  &kp A     &kp O      &kp E       &lt 1 U       &kp I                                                &kp D          &lt 1 H       &kp T   &kp N   &kp S  &kp MINUS
-&kp LSHIFT       &kp SEMI  &kp Q      &kp J       &kp K         &kp X     &lt 3 LEFT_BRACKET    &lt 3 RIGHT_BRACKET  &kp B          &kp M         &kp W   &kp V   &kp Z  &mt RSHIFT BACKSLASH
+&kp ESC          &kp N1    &kp N2     &kp N3      &kp N4        &kp N5                                               &kp N6         &kp N7        &kp N8  &kp N9  &kp N0  &kp EQUAL
+&kp TAB          &kp SQT   &kp COMMA  &kp DOT     &kp P         &kp Y                                                &kp F          &kp G         &kp C   &kp R   &kp L   &kp SLASH
+&mt LCTRL GRAVE  &kp A     &kp O      &kp E       &lt 1 U       &kp I                                                &kp D          &lt 1 H       &kp T   &kp N   &kp S   &kp MINUS
+&kp LSHIFT       &kp SEMI  &kp Q      &kp J       &kp K         &kp X     &lt 3 LEFT_BRACKET    &lt 3 RIGHT_BRACKET  &kp B          &kp M         &kp W   &kp V   &kp Z   &mt RSHIFT BACKSLASH
                                       &caps_word  &kp LEFT_ALT  &kp LGUI  &kp SPACE             &lt 1 BACKSPACE      &mt RCTRL RET  &kp LEFT_ALT  &mo 1
             >;
         };
@@ -20,10 +21,10 @@
         nav {
             display-name = "navigation";
             bindings = <
-&trans  &trans             &trans         &trans            &trans            &trans                    &trans         &trans         &trans      &trans     &trans      &to 0
-&trans  &trans             &trans         &kp LC(LS(TAB))   &kp LC(TAB)       &trans                    &kp PAGE_UP    &kp HOME       &kp UP      &kp END    &trans      &trans
-&trans  &kp LG(LS(GRAVE))  &kp LG(GRAVE)  &kp LG(LS(LBKT))  &kp LG(LS(RBKT))  &trans                    &kp PAGE_DOWN  &kp LEFT       &kp DOWN    &kp RIGHT  &kp RETURN  &trans
-&trans  &kp LG(BACKSLASH)  &trans         &trans            &trans            &trans  &to 0     &to 0   &trans         &kp BACKSPACE  &kp DELETE  &trans     &trans      &trans
+&trans  &trans             &trans         &trans            &trans            &trans                    &trans         &trans         &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &to 0
+&trans  &trans             &trans         &kp LC(LS(TAB))   &kp LC(TAB)       &trans                    &kp PAGE_UP    &kp HOME       &kp UP      &kp END            &trans           &trans
+&trans  &kp LG(LS(GRAVE))  &kp LG(GRAVE)  &kp LG(LS(LBKT))  &kp LG(LS(RBKT))  &trans                    &kp PAGE_DOWN  &kp LEFT       &kp DOWN    &kp RIGHT          &kp RETURN       &trans
+&trans  &kp LG(BACKSLASH)  &trans         &trans            &trans            &trans  &to 0     &to 0   &trans         &kp BACKSPACE  &kp DELETE  &trans             &trans           &trans
                                           &trans            &trans            &trans  &trans    &trans  &trans         &trans         &trans
             >;
         };
@@ -31,11 +32,11 @@
         sudoku {
             display-name = "sudoku";
             bindings = <
-&kp ESC  &kp Z  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans     &trans  &trans
-&trans   &kp X  &kp N1  &kp N2  &kp N3  &trans                    &trans  &trans    &kp UP    &trans     &trans  &trans
-&trans   &kp C  &kp N4  &kp N5  &kp N6  &trans                    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans   &kp V  &kp N7  &kp N8  &kp N9  &kp N0  &to 0     &to 0   &trans  &trans    &trans    &trans     &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans
+&kp ESC  &kp Z  &trans  &trans  &trans  &trans                       &trans  &trans    &trans    &trans     &trans  &trans
+&trans   &kp X  &kp N1  &kp N2  &kp N3  &mkp LCLK                    &trans  &trans    &kp UP    &trans     &trans  &trans
+&trans   &kp C  &kp N4  &kp N5  &kp N6  &mkp RCLK                    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+&trans   &kp V  &kp N7  &kp N8  &kp N9  &kp N0     &to 0     &to 0   &trans  &trans    &trans    &trans     &trans  &trans
+                        &trans  &trans  &trans     &trans    &trans  &trans  &trans    &trans
             >;
         };
 
