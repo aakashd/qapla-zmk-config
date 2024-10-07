@@ -42,8 +42,8 @@
             bindings = <
 &kp ESC          &kp N1    &kp N2     &kp N3      &kp N4      &kp N5                                                &kp N6         &kp N7        &kp N8     &kp N9  &kp N0  &kp EQUAL
 &kp TAB          &kp SQT   &kp COMMA  &kp DOT     &kp P       &kp Y                                                 &kp F          &kp G         &kp C      &kp R   &kp L   &kp SLASH
-&mt LCTRL GRAVE  &kp A     &kp O      &hllt 2 E   &hllt 1 U   &kp I                                                 &kp D          &hrlt 1 H     &hrlt 2 T  &kp N   &kp S   &kp MINUS
-&kp LSHIFT       &kp SEMI  &kp Q      &kp J       &kp K       &kp X      &lt 4 LEFT_BRACKET    &lt 4 RIGHT_BRACKET  &kp B          &kp M         &kp W      &kp V   &kp Z   &mt RSHIFT BACKSLASH
+&kp LCTRL        &kp A     &kp O      &hllt 2 E   &hllt 1 U   &kp I                                                 &kp D          &hrlt 1 H     &hrlt 2 T  &kp N   &kp S   &kp MINUS
+&mt LSHIFT GRAVE &kp SEMI  &kp Q      &kp J       &kp K       &kp X      &lt 4 LEFT_BRACKET    &lt 4 RIGHT_BRACKET  &kp B          &kp M         &kp W      &kp V   &kp Z   &mt RSHIFT BACKSLASH
                                       &caps_word  &kp LGUI    &kp SPACE  &kp LC(LA(LGUI))      &kp BACKSPACE        &mt RCTRL RET  &kp LEFT_ALT  &mo 1
             >;
         };
