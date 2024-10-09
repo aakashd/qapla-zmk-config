@@ -6,6 +6,13 @@
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LH0 LH1 LH2 LH3 LH4 LH5 LB0 LB1 LB2 LB3 LB4 LB5
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RH0 RH1 RH2 RH3 RH4 RH5 RB0 RB1 RB2 RB3 RB4 RB5
+
+// Layers
+#define DEF 0
+#define NAV 1
+#define NUM 2
+#define SYS 3
+
 / {
     behaviors {
         hllt: home_row_left_layer_tap {
@@ -40,55 +47,44 @@
         default_layer {
             display-name = "default";
             bindings = <
-&kp ESC          &kp N1    &kp N2     &kp N3      &kp N4      &kp N5                                                &kp N6         &kp N7        &kp N8     &kp N9  &kp N0  &kp EQUAL
-&kp TAB          &kp SQT   &kp COMMA  &kp DOT     &kp P       &kp Y                                                 &kp F          &kp G         &kp C      &kp R   &kp L   &kp SLASH
-&kp LCTRL        &kp A     &kp O      &hllt 2 E   &hllt 1 U   &kp I                                                 &kp D          &hrlt 1 H     &hrlt 2 T  &kp N   &kp S   &kp MINUS
-&mt LSHIFT GRAVE &kp SEMI  &kp Q      &kp J       &kp K       &kp X      &lt 4 LEFT_BRACKET    &lt 4 RIGHT_BRACKET  &kp B          &kp M         &kp W      &kp V   &kp Z   &mt RSHIFT BACKSLASH
-                                      &caps_word  &kp LGUI    &kp SPACE  &kp LC(LA(LGUI))      &kp BACKSPACE        &mt RCTRL RET  &kp LEFT_ALT  &mo 1
+&kp ESC          &kp N1    &kp N2     &kp N3       &kp N4       &kp N5                                                    &kp N6         &kp N7        &kp N8       &kp N9  &kp N0  &kp EQUAL
+&kp TAB          &kp SQT   &kp COMMA  &kp DOT      &kp P        &kp Y                                                     &kp F          &kp G         &kp C        &kp R   &kp L   &kp SLASH
+&kp LCTRL        &kp A     &kp O      &hllt NUM E  &hllt NAV U  &kp I                                                     &kp D          &hrlt NAV H   &hrlt NUM T  &kp N   &kp S   &kp MINUS
+&mt LSHIFT GRAVE &kp SEMI  &kp Q      &kp J        &kp K        &kp X      &lt SYS LEFT_BRACKET    &lt SYS RIGHT_BRACKET  &kp B          &kp M         &kp W        &kp V   &kp Z   &mt RSHIFT BACKSLASH
+                                      &caps_word   &kp LGUI     &kp SPACE  &kp LC(LA(LGUI))        &kp BACKSPACE          &mt RCTRL RET  &kp LEFT_ALT  &mo NAV
             >;
         };
 
         nav {
             display-name = "navigation";
             bindings = <
-&trans  &trans             &trans         &trans            &trans            &trans                    &trans         &trans         &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &to 0
-&trans  &kp LG(BACKSLASH)  &trans         &kp LC(LS(TAB))   &kp LC(TAB)       &trans                    &kp PAGE_UP    &kp HOME       &kp UP      &kp END            &trans           &trans
-&trans  &kp LG(LS(GRAVE))  &kp LG(GRAVE)  &kp LG(LS(LBKT))  &kp LG(LS(RBKT))  &trans                    &kp PAGE_DOWN  &kp LEFT       &kp DOWN    &kp RIGHT          &kp RETURN       &trans
-&trans  &trans             &trans         &trans            &trans            &trans  &to 0     &to 0   &trans         &kp BACKSPACE  &kp DELETE  &trans             &trans           &trans
-                                          &trans            &trans            &trans  &trans    &trans  &trans         &trans         &trans
+&trans  &trans             &trans         &trans            &trans            &trans                       &trans         &trans         &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans
+&trans  &kp LG(BACKSLASH)  &trans         &kp LC(LS(TAB))   &kp LC(TAB)       &trans                       &kp PAGE_UP    &kp HOME       &kp UP      &kp END            &trans           &trans
+&trans  &kp LG(LS(GRAVE))  &kp LG(GRAVE)  &kp LG(LS(LBKT))  &kp LG(LS(RBKT))  &trans                       &kp PAGE_DOWN  &kp LEFT       &kp DOWN    &kp RIGHT          &kp RETURN       &trans
+&trans  &trans             &trans         &trans            &trans            &trans  &to DEF     &to DEF  &trans         &kp BACKSPACE  &kp DELETE  &trans             &trans           &trans
+                                          &trans            &trans            &trans  &trans      &trans   &trans         &trans         &trans
             >;
         };
 
         number {
             display-name = "number";
             bindings = <
-&trans  &trans        &trans  &trans  &trans  &trans                      &trans     &trans        &trans         &trans         &trans        &trans
-&trans  &kp LS(LBKT)  &kp N1  &kp N2  &kp N3  &kp LBKT                    &kp EQUAL  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &trans        &trans
-&trans  &kp LS(RBKT)  &kp N4  &kp N5  &kp N6  &kp RBKT                    &kp MINUS  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &trans        &trans
-&trans  &trans        &kp N7  &kp N8  &kp N9  &kp N0    &to 0     &to 0   &trans     &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)  &trans
-                              &trans  &trans  &trans    &trans    &trans  &trans     &trans        &trans
-            >;
-        };
-
-        sudoku {
-            display-name = "sudoku";
-            bindings = <
-&kp ESC  &kp Z  &trans  &trans  &trans  &trans                       &trans  &trans    &trans    &trans     &trans  &trans
-&trans   &kp X  &kp N1  &kp N2  &kp N3  &mkp LCLK                    &trans  &trans    &kp UP    &trans     &trans  &trans
-&trans   &kp C  &kp N4  &kp N5  &kp N6  &mkp RCLK                    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans   &kp V  &kp N7  &kp N8  &kp N9  &kp N0     &to 0     &to 0   &trans  &trans    &trans    &trans     &trans  &trans
-                        &trans  &trans  &trans     &trans    &trans  &trans  &trans    &trans
+&trans  &trans        &trans  &trans  &trans  &trans                         &trans     &trans        &trans         &trans         &trans        &trans
+&trans  &kp LS(LBKT)  &kp N1  &kp N2  &kp N3  &kp LBKT                       &kp EQUAL  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &trans        &trans
+&trans  &kp LS(RBKT)  &kp N4  &kp N5  &kp N6  &kp RBKT                       &kp MINUS  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &trans        &trans
+&trans  &trans        &kp N7  &kp N8  &kp N9  &kp N0    &to DEF     &to DEF  &trans     &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)  &trans
+                              &trans  &trans  &trans    &trans      &trans   &trans     &trans        &trans
             >;
         };
 
         system {
             display-name = "system";
             bindings = <
-&trans          &to 2       &to 3       &to 4   &trans       &trans                    &trans  &trans       &trans  &trans  &trans  &trans
-&bootloader     &bt BT_NXT  &bt BT_PRV  &trans  &trans       &trans                    &trans  &trans       &trans  &trans  &trans  &bootloader
-&trans          &trans      &trans      &trans  &bootloader  &trans                    &trans  &bootloader  &trans  &trans  &trans  &trans
-&bt BT_CLR_ALL  &trans      &trans      &trans  &trans       &trans  &to 0     &to 0   &trans  &trans       &trans  &trans  &trans  &bt BT_CLR_ALL
-                                        &trans  &trans       &trans  &trans    &trans  &trans  &trans       &trans
+&trans          &to NAV     &to NUM     &trans  &trans       &trans                       &trans  &trans       &trans  &trans  &trans  &trans
+&bootloader     &bt BT_NXT  &bt BT_PRV  &trans  &trans       &trans                       &trans  &trans       &trans  &trans  &trans  &bootloader
+&trans          &trans      &trans      &trans  &bootloader  &trans                       &trans  &bootloader  &trans  &trans  &trans  &trans
+&bt BT_CLR_ALL  &trans      &trans      &trans  &trans       &trans  &to DEF     &to DEF  &trans  &trans       &trans  &trans  &trans  &bt BT_CLR_ALL
+                                        &trans  &trans       &trans  &trans      &trans   &trans  &trans       &trans
             >;
         };
     };
